@@ -1,5 +1,5 @@
 -- Q32: 2024 — Top 10 Cities by Data Volume (KB) for category 'Volatile Organic Compound'
-SET search_path TO dwh2_xxx;
+SET search_path TO dwh2_006;
 
 SELECT
   c.city_name,

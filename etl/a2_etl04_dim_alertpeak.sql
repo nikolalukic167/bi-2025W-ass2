@@ -6,7 +6,7 @@
 --   (1000, 'None', 0), (1001, 'Yellow', 1), (1002, 'Orange', 2), (1003, 'Red', 3), (1004, 'Crimson', 4);
 
 -- Make A2 dwh2_xxx, stg2_xxx schemas the default for this session
-SET search_path TO dwh2_xxx, stg2_xxx;
+SET search_path TO dwh2_006, stg2_006;
 
 -- =======================================
 -- Load dim_alertpeak

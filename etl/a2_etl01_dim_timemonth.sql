@@ -2,13 +2,13 @@
 -- HINT: Generate months from 2023-01-01 to 2024-12-31, compute:
 --   month_key (YYYYMM), year_num, quarter_num, month_num, month_name, mfirst_day, mlast_day, days_in_month
 -- EXAMPLE SHAPE (replace with your complete solution):
--- TRUNCATE TABLE dwh2_xxx.dim_timemonth;
+-- TRUNCATE TABLE dwh2_006.dim_timemonth;
 -- WITH months AS (...)
--- INSERT INTO dwh2_xxx.dim_timemonth (...)
+-- INSERT INTO dwh2_006.dim_timemonth (...)
 -- SELECT ... FROM months;
 
--- Make A2 dwh2_xxx, stg2_xxx schemas the default for this session
-SET search_path TO dwh2_xxx, stg2_xxx;
+-- Make A2 dwh2_006, stg2_006 schemas the default for this session
+SET search_path TO dwh2_006, stg2_006;
 
 -- =======================================
 -- Load dim_timemonth

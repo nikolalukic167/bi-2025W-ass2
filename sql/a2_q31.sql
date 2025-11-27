@@ -1,5 +1,5 @@
 -- Q31: O3 — Top 10 Cities by P95 Recorded Value for 2023
-SET search_path TO dwh2_xxx;
+SET search_path TO dwh2_006;
 
 WITH p95_2023 AS (
   SELECT
