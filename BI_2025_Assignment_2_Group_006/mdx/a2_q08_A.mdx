@@ -1,0 +1,14 @@
+-- Q08: For 2024, show Avg Data Quality by Country (countries with > 2000 devices reporting).
+SELECT
+  { [Measures].[Avg Data Quality] } ON COLUMNS,
+  ORDER(
+    FILTER(
+      [dim_city].[Geo].[country_name].Members,
+      [Measures].[Devices Reporting] >= 2000
+    ),
+    [Measures].[Avg Data Quality],
+    BDESC
+  ) ON ROWS
+FROM (
+  SELECT [dim_timemonth].[Time].[year_num].&[2024] ON 0 FROM [AirQ Cube]
+)

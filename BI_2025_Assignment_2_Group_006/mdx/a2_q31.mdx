@@ -1,0 +1,18 @@
+-- 31. For parameter O3, list the Top 10 Cities by P95 Recorded Value for 2023.
+-- Return the 10 cities with the highest values on rows (highest → lowest) and one column with P95 Recorded Value for 2023.
+
+SELECT
+  { [Measures].[P95 Recorded Value] } ON COLUMNS,
+  TOPCOUNT(
+    NONEMPTY(
+      [dim_city].[Geo].[city_name].Members,
+      [Measures].[P95 Recorded Value]
+    ),
+    10, [Measures].[P95 Recorded Value]
+  ) ON ROWS
+FROM [AirQ Cube]
+WHERE (
+  [dim_timemonth].[Time].[year_num].&[2023],
+  [dim_param].[Param].[param_name].&[O3]
+)
+

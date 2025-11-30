@@ -1,0 +1,15 @@
+-- Q07: For parameter PM10, show Avg Recorded Value and P95 Recorded Value by Country for 2023.
+SELECT
+  {
+    [Measures].[Avg Recorded Value],
+    [Measures].[P95 Recorded Value]
+  } ON COLUMNS,
+  NON EMPTY 
+    [dim_city].[Geo].[country_name].Members 
+  ON ROWS
+FROM (
+  SELECT [dim_timemonth].[Time].[year_num].&[2023] ON 0 FROM [AirQ Cube]
+)
+WHERE (
+  [dim_param].[Param].[param_name].&[PM10]
+)

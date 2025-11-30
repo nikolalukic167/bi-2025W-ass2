@@ -1,0 +1,13 @@
+-- Q05: For 2023 and 2024, show total Data Volume (KB) by Param Category x Year.
+SELECT
+  {
+    [dim_timemonth].[Time].[year_num].&[2023],
+    [dim_timemonth].[Time].[year_num].&[2024]
+  } ON COLUMNS,
+  NON EMPTY 
+    [dim_param].[Param].[category].Members 
+  ON ROWS
+FROM [AirQ Cube]
+WHERE (
+  [Measures].[Data Volume (KB)]
+)

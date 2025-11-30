@@ -138,7 +138,7 @@ cte_monthly_measures AS (
         city_key,
         param_key,
         -- Distinct (Device + Day)
-        COUNT(DISTINCT sensordevid, readat) AS reading_events_count,
+        COUNT(DISTINCT (sensordevid, readat)) AS reading_events_count,
         -- Distinct Devices
         COUNT(DISTINCT sensordevid) AS devices_reporting_count,
         -- Averages and Sums

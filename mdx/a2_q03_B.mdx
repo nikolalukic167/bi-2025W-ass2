@@ -1,0 +1,16 @@
+-- Q03: For PM10 in 2024, show the total Exceed Days (any) by City.
+SELECT
+  { [Measures].[Exceed Days (any)] } ON COLUMNS,
+  NON EMPTY 
+    ORDER(
+      [dim_city].[Geo].[city_name].Members,
+      [Measures].[Exceed Days (any)],
+      BDESC
+    )
+  ON ROWS
+FROM (
+  SELECT [dim_timemonth].[Time].[year_num].&[2024] ON 0 FROM [AirQ Cube]
+)
+WHERE (
+  [dim_param].[Param].[param_name].&[PM10]
+)

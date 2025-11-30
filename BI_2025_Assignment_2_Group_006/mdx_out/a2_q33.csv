@@ -1,0 +1,21 @@
+region_name,country_name,year_num,quarter_num,month_name,Avg Data Quality
+Central Europe,Austria,2024,3,Sep,3.5780422687530518
+Central Europe,Croatia,2024,2,Jun,3.5999999046325684
+Central Europe,Czech Republic,2024,2,Apr,3.2355555295944214
+Central Europe,Germany,2024,3,Sep,3.1179385662078856
+Central Europe,Hungary,2024,3,Aug,3.431372880935669
+Central Europe,Poland,2024,1,Jan,3.2857139110565186
+Eastern Europe,Belarus,2024,3,Sep,3.2380950450897217
+Eastern Europe,Greece,2024,3,Aug,3.123076915740967
+Eastern Europe,Russia,2024,2,Jun,3.2930970788002014
+Eastern Europe,Serbia,2024,2,Apr,3.4000000953674316
+Eastern Europe,Turkey,2024,2,Apr,3.264657974243164
+Western Europe,Belgium,2024,3,Sep,3.180000066757202
+Western Europe,Denmark,2024,2,Jun,3.4761900901794434
+Western Europe,Finland,2024,2,May,3.700000047683716
+Western Europe,France,2024,2,Apr,3.090994040171305
+Western Europe,Italy,2024,3,Aug,3.2403844594955444
+Western Europe,Netherlands,2024,2,Apr,3.2647058963775635
+Western Europe,Spain,2024,4,Dec,3.183332920074463
+Western Europe,Sweden,2024,4,Oct,3.2059930562973022
+Western Europe,United Kingdom,2024,4,Nov,3.415259003639221

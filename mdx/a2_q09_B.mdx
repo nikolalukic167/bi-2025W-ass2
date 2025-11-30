@@ -1,0 +1,14 @@
+-- Q09: For 2024, show Reading Events by Country x Quarter (Top 10 countries).
+SELECT
+  { [dim_timemonth].[Time].[quarter_num].Members } ON COLUMNS,
+  TOPCOUNT(
+    [dim_city].[Geo].[country_name].Members,
+    10,
+    [Measures].[Reading Events]
+  ) ON ROWS
+FROM (
+  SELECT [dim_timemonth].[Time].[year_num].&[2024] ON 0 FROM [AirQ Cube]
+)
+WHERE (
+  [Measures].[Reading Events]
+)
